@@ -21,7 +21,7 @@ class LoginScreen extends StatelessWidget {
             ),
             child: const Padding(
               padding: EdgeInsets.only(
-                top: 30,
+                top: 50,
                 left: 20,
               ),
               child: Text(
@@ -89,26 +89,58 @@ class LoginScreen extends StatelessWidget {
                       ),
                     ),
                     const SizedBox(height: 40),
-                    Container(
-                      alignment: Alignment.center,
-                      height: 50,
-                      width: 280,
-                      decoration: const BoxDecoration(
-                        borderRadius: BorderRadius.all(
-                          Radius.circular(40),
+                    InkWell(
+                      onTap: () {},
+                      child: Container(
+                        alignment: Alignment.center,
+                        height: 60,
+                        width: 280,
+                        decoration: const BoxDecoration(
+                          borderRadius: BorderRadius.all(
+                            Radius.circular(40),
+                          ),
+                          gradient: LinearGradient(
+                            colors: [
+                              Color(0xffB81736),
+                              Color(0xff281537),
+                            ],
+                          ),
                         ),
-                        gradient: LinearGradient(
-                          colors: [
-                            Color(0xffB81736),
-                            Color(0xff281537),
-                          ],
+                        child: const Text(
+                          'SIGN IN',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 20,
+                          ),
                         ),
                       ),
-                      child: const Text(
-                        'SIGN IN',
-                        style: TextStyle(color: Colors.white, fontSize: 20),
+                    ),
+                    const SizedBox(height: 150),
+                    Align(
+                      alignment: Alignment.bottomRight,
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.end,
+                        children: [
+                          const Text(
+                            'Don\'t have an account?',
+                            style: TextStyle(
+                              color: Colors.grey,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                          TextButton(
+                            onPressed: () {},
+                            child: const Text(
+                              'Sign Up',
+                              style: TextStyle(
+                                  color: Colors.black,
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 17),
+                            ),
+                          ),
+                        ],
                       ),
-                    )
+                    ),
                   ],
                 ),
               ),
