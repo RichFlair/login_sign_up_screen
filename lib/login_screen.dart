@@ -6,17 +6,115 @@ class LoginScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
-        height: double.infinity,
-        width: double.infinity,
-        decoration: const BoxDecoration(
-          gradient: LinearGradient(
-            colors: [
-              Color(0xffB81736),
-              Color(0xff281537),
-            ],
+      body: Stack(
+        children: [
+          Container(
+            height: double.infinity,
+            width: double.infinity,
+            decoration: const BoxDecoration(
+              gradient: LinearGradient(
+                colors: [
+                  Color(0xffB81736),
+                  Color(0xff281537),
+                ],
+              ),
+            ),
+            child: const Padding(
+              padding: EdgeInsets.only(
+                top: 30,
+                left: 20,
+              ),
+              child: Text(
+                'Hello\nSign in!',
+                style: TextStyle(
+                  fontSize: 40,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white,
+                ),
+              ),
+            ),
           ),
-        ),
+          Padding(
+            padding: const EdgeInsets.only(top: 200),
+            child: Container(
+              width: double.infinity,
+              decoration: const BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.only(
+                  topLeft: Radius.circular(40),
+                  topRight: Radius.circular(40),
+                ),
+              ),
+              child: Padding(
+                padding: const EdgeInsets.only(left: 22, right: 22),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    const TextField(
+                      decoration: InputDecoration(
+                        label: Text(
+                          'Email',
+                          style: TextStyle(
+                              color: Color(0xffB81736),
+                              fontWeight: FontWeight.bold,
+                              fontSize: 17),
+                        ),
+                        suffixIcon: Icon(Icons.check),
+                      ),
+                    ),
+                    const TextField(
+                      decoration: InputDecoration(
+                        label: Text(
+                          'Password',
+                          style: TextStyle(
+                              color: Color(0xffB81736),
+                              fontWeight: FontWeight.bold,
+                              fontSize: 17),
+                        ),
+                        suffixIcon: Icon(Icons.visibility_off),
+                      ),
+                    ),
+                    const SizedBox(height: 20),
+                    Align(
+                      alignment: Alignment.centerRight,
+                      child: TextButton(
+                        onPressed: () {},
+                        child: const Text(
+                          'Forgot Password?',
+                          style: TextStyle(
+                            color: Color(0xff281537),
+                            fontSize: 17,
+                          ),
+                        ),
+                      ),
+                    ),
+                    const SizedBox(height: 40),
+                    Container(
+                      alignment: Alignment.center,
+                      height: 50,
+                      width: 280,
+                      decoration: const BoxDecoration(
+                        borderRadius: BorderRadius.all(
+                          Radius.circular(40),
+                        ),
+                        gradient: LinearGradient(
+                          colors: [
+                            Color(0xffB81736),
+                            Color(0xff281537),
+                          ],
+                        ),
+                      ),
+                      child: const Text(
+                        'SIGN IN',
+                        style: TextStyle(color: Colors.white, fontSize: 20),
+                      ),
+                    )
+                  ],
+                ),
+              ),
+            ),
+          ),
+        ],
       ),
     );
   }
