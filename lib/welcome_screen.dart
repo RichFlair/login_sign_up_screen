@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:login_sign_up_screen/login_screen.dart';
 
 class WelcomeScreen extends StatelessWidget {
   const WelcomeScreen({super.key});
@@ -38,25 +39,32 @@ class WelcomeScreen extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 40),
-              Container(
-                height: 50,
-                width: 300,
-                decoration: BoxDecoration(
-                  border: Border.all(
-                    style: BorderStyle.solid,
-                    color: Colors.white,
-                  ),
-                  borderRadius: const BorderRadius.all(
-                    Radius.circular(30),
+              GestureDetector(
+                onTap: () => Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (context) => const LoginScreen(),
                   ),
                 ),
-                child: const Center(
-                  child: Text(
-                    'SIGN IN',
-                    style: TextStyle(
+                child: Container(
+                  height: 50,
+                  width: 300,
+                  decoration: BoxDecoration(
+                    border: Border.all(
+                      style: BorderStyle.solid,
                       color: Colors.white,
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold,
+                    ),
+                    borderRadius: const BorderRadius.all(
+                      Radius.circular(30),
+                    ),
+                  ),
+                  child: const Center(
+                    child: Text(
+                      'SIGN IN',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                      ),
                     ),
                   ),
                 ),
