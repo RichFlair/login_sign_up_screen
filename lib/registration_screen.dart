@@ -6,18 +6,31 @@ class RegistrationScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
-        width: double.infinity,
-        height: double.infinity,
-        decoration: const BoxDecoration(
-          gradient: LinearGradient(
-            colors: [
-              Color(0xffB81736),
-              Color(0xff281537),
-            ],
+      body: Stack(
+        children: [
+          Container(
+            width: double.infinity,
+            height: double.infinity,
+            decoration: const BoxDecoration(
+              gradient: LinearGradient(
+                colors: [
+                  Color(0xffB81736),
+                  Color(0xff281537),
+                ],
+              ),
+            ),
+            child: const Padding(
+              padding: EdgeInsets.only(top: 50, left: 20),
+              child: Text(
+                'Create Your\nAccount',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 40,
+                ),
+              ),
+            ),
           ),
-        ),
-        child: const Text('Create Your\nAccount'),
+        ],
       ),
     );
   }
