@@ -111,7 +111,7 @@ class RegistrationScreen extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(
-                    height: 40,
+                    height: 50,
                   ),
                   // Sign Up button container
                   Container(
@@ -139,15 +139,28 @@ class RegistrationScreen extends StatelessWidget {
                       ),
                     ),
                   ),
+                  const SizedBox(
+                    height: 60,
+                  ),
                   Align(
                     alignment: Alignment.bottomRight,
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.end,
                       children: [
-                        const Text('Have an account?'),
+                        const Text(
+                          'Have an account?',
+                          style: TextStyle(color: Colors.grey, fontSize: 18),
+                        ),
                         TextButton(
                           onPressed: () {},
-                          child: const Text('Sign In'),
+                          child: const Text(
+                            'Sign In',
+                            style: TextStyle(
+                              color: Color(0xff281537),
+                              fontSize: 18,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
                         ),
                       ],
                     ),
