@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:login_sign_up_screen/registration_screen.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
@@ -89,7 +90,7 @@ class LoginScreen extends StatelessWidget {
                       ),
                     ),
                     const SizedBox(height: 40),
-                    InkWell(
+                    GestureDetector(
                       onTap: () {},
                       child: Container(
                         alignment: Alignment.center,
@@ -129,7 +130,13 @@ class LoginScreen extends StatelessWidget {
                             ),
                           ),
                           TextButton(
-                            onPressed: () {},
+                            onPressed: () =>
+                                Navigator.of(context).pushReplacement(
+                              MaterialPageRoute(
+                                builder: (context) =>
+                                    const RegistrationScreen(),
+                              ),
+                            ),
                             child: const Text(
                               'Sign Up',
                               style: TextStyle(
